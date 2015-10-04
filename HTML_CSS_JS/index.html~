@@ -12,7 +12,7 @@
 		<fieldset >
 			<legend>Your Face</legend>
 			<label for="photo">Your image:</label>
-			<input type="file" name="fileToUpload" required>
+			<input type="file" id="avatar"name="fileToUpload" required>
 			<br>
 			<label for="preview">Image preview:</label>
 			<img id="preview">
@@ -54,7 +54,7 @@
 		<fieldset >
 			<legend>Your Contact Information</legend>
 			<label for="email">Email:</label>
-		    	<input type="email" name="email">
+		    	<input type="email" name="email" required>
 			<br>
 			<label for="Mobile">Phone Number:</label>
 		    	<input type="tel" name="phoneno">
@@ -67,54 +67,7 @@
 			<input type="checkbox" name="cmethod" value="wh"> Whatsapp 
 			<input type="checkbox" name="cmethod" value="iac"> In-app chat 
 		</fieldset>
-
-	</form>
-
-	<form action="test" method="get">
-		<p>Please fill in the following information:</p>
-
-    		<label for="firstname">First name:</label>
-	    	<input type="text" name="firstname" value="Dave" autofocus>
-	    	<br>
-	    	<label for="lastname">Last name:</label>
-	    	<input type="text" name="lastname" placeholder="Your last name goes here">
-	   		<br>
-	    	<label for="age">Age:</label>
-	    	<input type="text" name="age" required>
-	    	<br>
-    	
-
-		<p>Please enter any feed back you have.</p>
-
-		<textarea rows="3" cols="60" name="feedback" autofocus>Please enter your text here
-		</textarea>
-		<br>
-		<input type="file" name="fileToUpload">
-		<br>
-		Please select each of the following that you have. <br>
-		<input type="checkbox" name="items" value="car"> Car <br>
-		<input type="checkbox" name="items" value="bear"> Car <br>
-		<input type="checkbox" name="items" value="tooth"> Car <br>
-		<p>What city are you in</p>
-
-		<select name = "where">
-			<option value="hk">Hong Kong</option>
-			<option value="shanghai">Shanghai</option>
-		</select>
-		
-		<br>
-
-	    	<label for="age">Your age:</label>
-	    	<input type="number" min="0" max="99" step="1" value="18" name="age" required><br>
-	    	<label for="birthday">Your birthday:</label>
-	    	<input type="date" name="birthday"><br>
-	    	<label for="wakeup">You want to wake up at:</label>
-	    	<input type="time" name="wakeup"><br>
-	    	<label for="color">Your favorite color:</label>
-	    	<input type="color" name="color"> <br>
-	    	<label for="mood">Your mood:</label>
-	    	Bad <input type="range" min="0" max="100" step="5" value="50" name="mood"> Good<br>
-			<input type="submit" value="Submit">	
+		<input type="submit">
 	</form>
 </body>
 </html>

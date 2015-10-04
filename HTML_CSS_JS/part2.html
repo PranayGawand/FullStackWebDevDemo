@@ -3,7 +3,14 @@
 <head>
 	<title>Reg Page</title>
 	<style>
-	h1 {font-size:40px}
+		fieldset {background:lightyellow; border:10px solid yellow; margin-bottom:10px; width:720px}
+		fieldset label {width:180px; text-align:right; display:inline-block}
+		.topalign {vertical-align:top}
+		span {background:red; font-weight: bold; font-family: Arial}
+		fieldset div input{text-align:center}
+		fieldset textarea {width:360px; height:50px}
+		.qwe {margin-left: 150px}
+		
 	</style>
 </head>
 <body> 
@@ -48,8 +55,10 @@
 		</fieldset>
 		<fieldset >
 			<legend>Your Indicators</legend>
-			Short <input type="range" min="0" max="100" value="50" name="height"> Tall<br>
-			Poor <input type="range" min="0" max="100" value="50" name="salary"> Rich<br>
+			<div class="qwe">
+			<span>Short</span><input type="range" min="0" max="100" value="50" name="height"><span>Tall</span><br>
+			<span>Poor </span><input type="range" min="0" max="100" value="50" name="salary"><span>Rich</span><br>
+			</div>
 		</fieldset>
 		<fieldset >
 			<legend>Your Contact Information</legend>
@@ -59,15 +68,16 @@
 			<label for="Mobile">Phone Number:</label>
 		    	<input type="tel" name="phoneno">
 			<br>
-			<label for="address">Address:</label>
+			<label class="topalign" for="address">Address:</label>
 			<textarea rows="3" cols="50" name="address" placeholder="Enter your address"></textarea>
 			<br>
-			<label for="cmethod">Method to contact you:</label>
+			<label for="cmethod" swidth:auto>Method to contact you:</label>
 			<input type="checkbox" name="cmethod" value="em"> Email 
 			<input type="checkbox" name="cmethod" value="wh"> Whatsapp 
 			<input type="checkbox" name="cmethod" value="iac"> In-app chat 
 		</fieldset>
 		<input type="submit">
 	</form>
+
 </body>
 </html>
