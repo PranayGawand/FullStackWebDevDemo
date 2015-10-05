@@ -19,7 +19,7 @@
 	<script src="https://www.cse.ust.hk/~rossiter/dating_web_site.js"></script>
 	
 	<h1>Please Enter Your Details For Our Dating Website!</h1>
-	<form action="http://ihome.ust.hk/~rossiter/cgi-bin/show_everything.php" method="post" enctype="multipart/form-data">
+	<form action="https://ihome.ust.hk/~rossiter/cgi-bin/show_everything.php" method="post" enctype="multipart/form-data">
 		<fieldset >
 			<legend>Your Face</legend>
 			<label for="photo">Your image:</label>
