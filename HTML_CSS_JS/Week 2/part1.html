@@ -5,7 +5,7 @@
 </head>
     <body onload="do_game()">
         <script type = "text/JavaScript">
-        	var colors = ["Blue","Yellow","Red","Green","Black","Orange","Purple"];
+        	var colors = ["blue","yellow","red","green","black","orange","purple"];
         	colors = colors.sort();
         	function do_game(){
         	var guess;
@@ -17,7 +17,7 @@
         		alert(target);
         		flag = true
         		while (flag){
-        			guess = prompt("I am thinking of one of these colors:\n"+colors+"\nWhat color am I thinking of?")
+        			guess = prompt("I am thinking of one of these colors:\n\n"+colors+"\n\nWhat color am I thinking of?")
         			if (guess == target){
         				alert("Correct Answer! Congratz!");
         				break;

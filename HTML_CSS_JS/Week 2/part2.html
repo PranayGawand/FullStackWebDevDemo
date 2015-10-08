@@ -5,39 +5,38 @@
 </head>
     <body onload="do_game()">
         <script type = "text/JavaScript">
-        	var colors = ["Blue","Yellow","Red","Green","Black","Orange","Purple"];
+        	var colors = ["blue","yellow","red","green","black","orange","purple"];
+            var count = 0;
         	colors = colors.sort();
         	function do_game(){
-        	    guess;
         		console.log("Color list is: "+colors);
         		var tarIndex = Math.floor(Math.random()*7);
         		target = colors[tarIndex];
         		console.log("Index is:");
         		//console.log("Target is:");
-        		alert(target);
+        		alert(target+"\n\nThis is fyi.");
         		flag = true
         		while (flag){
-        			guess = prompt("I am thinking of one of these colors:\n"+colors+"\nWhat color am I thinking of?")
+                    count += 1;
+        			guess = prompt("I am thinking of one of these colors:\n\n"+colors+"\n\nWhat color am I thinking of?")
                     check_guess();
         			}
-        		}
         	}
 
             function check_guess(){
                 if (colors.indexOf(guess) == -1){
                     alert("I don't recognize this color!");
-                }
-                if (target == guess){
+                } else if (target == guess){
                     flag = false;
                     set(guess);
-                    alert("Correct!")
-                } if else (target < guess){
+                    if (count == 1)
+                    ("Correct!\n\nYou got the answer in only 1 guess!\n\nNow you can see the color on the background!");
+                else {("Correct!\n\nYou got the answer in "+count+" guesses!\n\nNow you can see the color on the background!");}
+                } else if (target < guess){
                     alert("Your guess is alphabetically higher than the answer"); 
-                } if else (target > guess){
+                } else if (target > guess){
                     alert("Your guess is alphabetically lower than the answer"); 
-                
-
-
+                }
             }
 
             function set(color){
