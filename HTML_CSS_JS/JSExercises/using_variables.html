@@ -1,0 +1,22 @@
+<!DOCTYPE html>                   
+<html>
+    <body>
+        <input type = 'button' value = 'click on me for print!' onClick = 'return callPrint();'>
+        <div id = 'div1'>
+        <p id = "printValue"></p>
+        </div>
+        <script>
+            function callPrint(){
+            var firstName = "Mike";
+            var lastName = "Clark";
+            var age = 35;
+            var node1 = document.createTextNode("This is "+firstName+" "+lastName+"\
+            . He is "+age+" years old.");
+            var br = document.createElement('br')
+            document.getElementById('div1').appendChild(node1);
+            document.getElementById('div1').appendChild(br);
+            }
+        </script>
+        
+    </body>
+</html>

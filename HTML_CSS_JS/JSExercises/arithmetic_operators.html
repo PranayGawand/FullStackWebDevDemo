@@ -1,0 +1,12 @@
+<!DOCTYPE html>                           
+<html>
+    <body>
+        <div id = "div1"></div>
+        <script>
+            var tempInCel = prompt("Enter the temp in Cel: ");
+            var tempInFar = (tempInCel * 9/5)+32;
+            var testNode = document.createTextNode("The temp in Far is " + tempInFar.toString() + ".");
+            document.getElementById("div1").appendChild(testNode)
+        </script>
+    </body>
+</html>
