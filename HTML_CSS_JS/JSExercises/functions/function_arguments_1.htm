@@ -1,0 +1,16 @@
+<!DOCTYPE html>                   
+<html>
+    <body onload="varInput()">
+        <p id='text'></p>
+        <script>
+            function varInput(a, b) {
+                return a * b; 
+            }
+            var len = prompt("Length? ");
+            var wid = prompt("Width? ");
+            var textNode = varInput(len,wid).toString();
+            document.getElementById("text").innerHTML = textNode;
+
+        </script>
+    </body>
+</html>

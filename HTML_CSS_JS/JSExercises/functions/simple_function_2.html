@@ -1,0 +1,19 @@
+<!DOCTYPE html>                   
+<html>
+    <body onload="primeFactors()">
+        <p id='text'></p>
+        <script>
+            function primeFactors() {
+                var n = prompt("Enter a number to start: ");
+                var store = [];
+                for (i = 2; i < n; i++){
+                    if (n%i != 0)
+                        store.push(i);                        
+                }
+                console.log(store)
+                for (item in store)
+                    document.writeln(store[item]);
+            }
+        </script>
+    </body>
+</html>

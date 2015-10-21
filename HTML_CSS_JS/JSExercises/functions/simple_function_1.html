@@ -1,0 +1,29 @@
+<!DOCTYPE html>                   
+<html>
+    <body>
+        <div>
+            <p id='text'>test</p>
+            <input type = 'button' value = 'click for change the text' onClick = 'return clickC();'>
+            <br>
+            <input type = 'button' value = 'click for change the text' onClick = 'return clickC();'>
+            <br>
+        </div>
+        <script>
+            function clickA(){
+                var textNode = document.createTextNode("Hello World!")
+                var brNode = document.createElement('br')
+                document.getElementsByTagName('div')[0].appendChild(textNode);
+                document.getElementsByTagName('div')[0].appendChild(brNode);
+                console.log("Success!")
+            }
+            
+            function clickC(){
+                var text = "Hello! Hi!"
+                document.getElementById("text").innerHTML = text;
+            
+            
+            }
+            
+        </script>
+    </body>
+</html>
