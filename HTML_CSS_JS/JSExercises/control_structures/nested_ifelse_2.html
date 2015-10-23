@@ -1,0 +1,43 @@
+<!DOCTYPE html>                   
+<html>
+    <head>
+        <style>
+            fieldset {background:lightgray; border:10px solid gray; margin-bottom:10px; width:window.size}
+            fieldset label {width:200px; text-align:right; display:inline-block}
+            lenged {font: italic}
+        </style>
+    </head>
+    <body>
+        <script>
+            function validateTriangle(a1,b1,c1){
+            var a = parseInt(a1);
+            var b = parseInt(b1);
+            var c = parseInt(c1);
+            if(a < (b+c)){
+            if(b < (a+c)){
+            if(c < (a+b)){
+            document.write("Valid Triangle");
+            }else{
+            document.write("Invalid Triangle");
+            }
+            }else{
+            document.write("Invalid Triangle");
+            }
+            }else{
+            document.write("Invalid Triangle");
+            }
+            }
+        </script>
+        <fieldset>
+        <legend>Check whether the triangle is valid!</legend>
+        <label>a:</label>
+        <input type='number' id='a'><br>
+        <label>b:</label>
+        <input type='number' id='b'><br>
+        <label>c:</label>
+        <input type='number' id='c'><br>
+        </fieldset>
+        <button onclick="validateTriangle(document.getElementById('a').value, document.getElementById('b').value, document.getElementById('c').value)">Click me!</button>
+        <div></div>
+    </body>
+</html>

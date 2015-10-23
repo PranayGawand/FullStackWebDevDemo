@@ -1,0 +1,17 @@
+<!DOCTYPE html>                      
+<html>
+    <head>
+        <script>
+            function negpos(){
+                var num=prompt("Enter an integer");
+                var stat=(num>=0)?"positive":"negative";
+                var elvisLives = Math.PI > 4 ? "Yep" : "Nope";
+                document.write("Entered number is " + stat + "<br>Pi is greater than 4? " + elvisLives);
+            }
+        </script>
+    </head>
+    <body>
+        <input type="button" value="click me to enter character" onclick="return negpos();">
+    </body>
+</html>
+        
