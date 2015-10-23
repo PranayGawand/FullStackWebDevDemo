@@ -1,0 +1,35 @@
+<!DOCTYPE html>                   
+<html>
+    <head>
+        <style>
+            fieldset {background:lightgray; border:10px solid gray; margin-bottom:10px; width:window.size}
+            fieldset label {width:200px; text-align:right; display:inline-block}
+        </style>
+    </head>
+    <body>
+        <script>
+            function insure(age,status,gender){
+                if (status !== null){
+                    if (status == 'M'){
+                        document.getElementsByTagName('div')[0].innerHTML = 'Insured!'
+                    }else{
+                        if((gender == "M" && age > 30) || (gender == "F" && age > 25))
+                            document.getElementsByTagName('div')[0].innerHTML = 'Insured!'
+                        else
+                            document.getElementsByTagName('div')[0].innerHTML = 'Not insured!'
+                    }
+                }
+            }
+        </script>
+        <fieldset>
+        <label>Age:</label>
+        <input type='number' id='age'><br>
+        <label>Status:</label>
+        <input type='text' id='status'><br>
+        <label>Gender:</label>
+        <input type='text' id='gender'><br>
+        </fieldset>
+        <button onclick="insure(document.getElementById('age').value, document.getElementById('status').value, document.getElementById('gender').value)">Click me!</button>
+        <div></div>
+    </body>
+</html>
