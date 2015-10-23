@@ -6,17 +6,17 @@
                 var a = document.getElementById("len").value;
                 var b = document.getElementById("wid").value;
                 var result = (a * b);
-                var textNode = function output(result){
+                var textNode = function (result){
                     var node = result.toString();
                     return(node);
                 };
-                console.log(textNode);
-                document.getElementById('target').appendChild(textNode);
+                console.log(textNode(result));
+                document.getElementById('target').appendChild(textNode(result).toString());
             }
 
         </script>
     </head>
-    <body>
+    <body>z
         <div>
         <p id='text'></p>
         <input id = 'len' type = "number"><br>

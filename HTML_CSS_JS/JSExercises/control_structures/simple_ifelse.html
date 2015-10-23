@@ -1,0 +1,26 @@
+
+
+<!DOCTYPE html>                   
+<html>
+    <body>
+        <input type = 'button' onClick = 'return compute()' value = 'Compute your cost!'>
+        <br>
+        <br>
+        <script>
+            function compute(){
+                var q = prompt('How many items did you buy? ');
+                var p = prompt('What is the price? ');
+                if (q > 1000){
+                    var textNode = ((p * q) * 0.9).toString();
+                }else{
+                    var textNode = (p * q).toString();
+                }
+                var targetText = "It cost you " + textNode +　" bucks!";
+                document.getElementsByTagName('div')[0].innerHTML = targetText;
+
+            }
+        </script>
+        <div id = 'texrtDiv'></div>
+
+    </body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>                      
+<html>
+<head>
+<script>
+    function checkNo(number){
+        number = document.getElementById('G1').value;
+        var ele=document.getElementById('text');
+        if(ele !== null){
+            if(number < 0){
+            ele.innerHTML="Entered number is negative.";
+            }
+            else if(number > 0){
+            ele.innerHTML="Entered number is positive.";
+            }
+            else{
+            ele.innerHTML="Entered number is zero.";
+            }
+        }
+    }
+</script>
+</head>
+<body>
+<p id='text'></p>
+<input id='G1' type='number'>
+<input type="button" onclick="return checkNo()" value="click me to check output">
+</body>
+</html>
