@@ -1,0 +1,23 @@
+<!DOCTYPE html>         
+<html>
+    <body>
+        <script>
+            function prime(){
+            for (i = 2; i < 101; i++){
+                flag = true;
+                for (j = 2; j < i; j++)
+                    if (i % j == 0){
+                        flag = false;
+                        break;
+                    } else{
+                        flag = true;
+                    }
+                if (flag == true)
+                    document.write(i.toString()+" ");
+                }
+                
+            }
+        </script>
+        <input type='button' onclick="return prime();" value="Click!">
+    </body>
+</html>
