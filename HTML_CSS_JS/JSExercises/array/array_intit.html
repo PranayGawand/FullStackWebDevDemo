@@ -1,0 +1,23 @@
+<!DOCTYPE html>                      
+<html>
+    <head>
+        <script>
+            function createArray(){
+                var elements = prompt("Enter comma separated array values : ");
+                elements=elements.split(",");
+                document.write("array elements are : ");
+                for(i=0;i<elements.length;i++){
+                    document.write(elements[i]+" ");
+                }
+                // asignment initialization
+                var arr1 = [2,4,77,14,-9,12,22];
+                // constructor iniialization
+                var arr2 = new Array(2,4,77,14,-9,12,22);
+            }
+        </script>
+    </head>
+    <body>
+        <input type="button" value="click me to enter character" onclick="return negpos();">
+    </body>
+</html>
+        

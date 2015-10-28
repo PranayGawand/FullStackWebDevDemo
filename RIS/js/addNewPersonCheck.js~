@@ -1,0 +1,50 @@
+function check()
+{ 
+   if( document.newUserRegistration.firstname.value == "" )
+   {
+     alert( "Please fill out your First Name!" );
+     document.newUserRegistration.firstname.focus() ;
+     return false;
+   }
+   if( document.newUserRegistration.lastname.value == "" )
+   {
+     alert( "Please fill out your Last Name!" );
+     document.newUserRegistration.lastname.focus() ;
+     return false;
+   }
+   if( document.newUserRegistration.personid.value == "" )
+   {
+     alert( "Please fill out your Person ID!" );
+     document.newUserRegistration.personid.focus() ;
+     return false;
+   }  
+   if (( document.newUserRegistration.personid.value != parseInt(document.newUserRegistration.personid.value) ))
+   {
+     alert( "Person ID should be an integer!" );
+     document.newUserRegistration.personid.focus() ;
+     return false;
+   }
+   if( document.newUserRegistration.address.value == "" )
+   {
+     alert( "Please fill out your Address!" );
+     document.newUserRegistration.address.focus() ;
+     return false;
+   }
+
+   var email = document.newUserRegistration.emailid.value;
+   atpos = email.indexOf("@");
+   dotpos = email.lastIndexOf(".");
+   if (email == "" || atpos < 1 || ( dotpos - atpos < 2 )) {
+     alert("Please enter correct email address!")
+     document.newUserRegistration.emailid.focus() ;
+     return false;
+  }
+  if( document.newUserRegistration.mobileno.value == "" ||
+           document.newUserRegistration.mobileno.value.length != 10 )
+   {
+     alert( "Please fill out a 10 digit Phone Number." );
+     document.newUserRegistration.mobileno.focus() ;
+     return false;
+   } 
+   return( true );
+}

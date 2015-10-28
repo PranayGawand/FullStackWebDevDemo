@@ -1,0 +1,65 @@
+<HTML>
+<HEAD>
+<TITLE>Radiology Imformation System Login</TITLE>
+
+<script language = "JavaScript" type = "text/javascript">
+function checkform(form) {
+	if (form.USERID.value == "") {
+		alert("Please Enter Your Username for the RIS");
+		form.USERID.focus();
+		return false;
+	}
+	if (form.PASSWD.value == "") {
+		alert("Please Enter Your Password for the RIS");
+		form.PASSWD.focus();
+		return false;
+	}
+	return true;
+}
+</script>
+
+</HEAD>
+
+<BODY>
+<!--This is the login page-->
+<div id="image" style="background: url(../theme.jpg) no-repeat; width: 100%; height: 100%; background-size: 100%;">
+
+<br><br><br><br><br><br><br><br>	
+
+<H1><CENTER>RIS System Login</CENTER></H1>
+<P><CENTER>To login RIS, you need to enter a valid User Name with the cooresponding Password.</CENTER></P>
+
+<h2><center>
+<FORM NAME="LoginForm" ACTION="../controller/login.jsp" METHOD="post" onSubmit = "return checkform(this);">
+<TABLE>
+
+<TR VALIGN=TOP ALIGN=LEFT>
+<TD><B><I>User Name:</I></B></TD>
+<TD><INPUT TYPE="text" NAME="USERID" ><BR></TD>
+</TR>
+
+<TR VALIGN=TOP ALIGN=LEFT>
+<TD><B><I>Password:</I></B></TD>
+<TD><INPUT TYPE="password" NAME="PASSWD"></TD>
+</TR>
+
+</TABLE>
+<INPUT TYPE="submit" NAME="bSubmit" VALUE="Login">
+<INPUT TYPE="Reset">
+</FORM>
+</center></h2>
+
+<br>
+
+<h3><center>
+<FORM ACTION="../controller/oracleLogout.jsp" METHOD="post" >
+<INPUT TYPE="submit" NAME="oLogOut" VALUE="Log Out Oracle">
+</FORM>
+
+<br><br>
+<a href='userDocumentation.html' target='_blank'>Help</a>
+</center></h3>
+
+</div>
+</BODY>
+</HTML>
