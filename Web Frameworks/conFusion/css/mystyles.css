@@ -30,7 +30,7 @@ address{
 }
 
 body{
-    align:center;
+    align-content:center;
     padding:50px 0px 0px 0px;
     z-index:0;
 }
@@ -61,4 +61,11 @@ body{
 
 .navbar-inverse .navbar-nav .open .dropdown-menu> li> a:hover {
     color:#000000;
+}
+
+.card
+{
+	-webkit-box-shadow: 5px 5px 24px 1px rgba(148,148,148,1);
+-moz-box-shadow: 5px 5px 24px 1px rgba(148,148,148,1);
+box-shadow: 5px 12px 24px 1px rgba(148,148,148,1);
 }
