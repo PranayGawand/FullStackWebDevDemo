@@ -219,13 +219,16 @@
                         </label>
                     </div>
                     <p style="padding:20px;"></p>
-                    <div class='col-xs-12 col-sm-2 '>
-                        <label style="width:110px; text-align:right;">Date and Time : </label>                       </div>
-                    <div class='col-xs-6 col-sm-4'>
-                        <input type="text" class="form-control"  placeholder="Calendar"><i class="glyphicon glyphicon-calendar form-control-feedback"></i>
-                    </div>
-                    <div class='col-xs-6 col-sm-4 col-sm-push-1'>
-                        <input type="text" class="form-control"  placeholder="Time"><i class="glyphicon glyphicon-time form-control-feedback"></i>
+                    <div class="form-group has-feedback">
+                        <label for="dateAndTime" class="col-sm-2 control-label">Date and Time</label>
+                        <div class="col-sm-4">
+                            <input type="text" class="form-control" placeholder="Date">
+                            <span class="glyphicon glyphicon-calendar form-control-feedback" aria-hidden="true">&nbsp;</span>
+                        </div>
+                        <div class="col-sm-offset-1 col-sm-4">
+                            <input type="text" class="form-control" placeholder="Time">
+                            <span class="glyphicon glyphicon-time form-control-feedback" aria-hidden="true">&nbsp;</span>
+                        </div>
                     </div>
                     <p style="padding:30px;"></p>
                     <div class='col-xs-6 col-sm-4 col-sm-push-2'>
