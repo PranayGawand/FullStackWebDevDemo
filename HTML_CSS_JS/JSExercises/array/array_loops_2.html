@@ -1,0 +1,28 @@
+<!DOCTYPE html>                      
+<html>
+    <head>
+    </head>
+    <body onload="createArray()">
+        <script>
+            function createArray(){
+                var arr1 = [];
+                var arr2 = [];
+                for (i = 1; i < 21; i++){
+                    arr1[i] = i;
+                }
+                var count = 20;
+                var i = 1;
+                while (count > 0){
+                    arr2[i] = count;
+                    i++;
+                    count--;
+                }
+                document.write(arr1);
+                document.write("<br>");
+                document.write(arr2);
+            }
+        </script>
+    </body>
+</html>
+
+

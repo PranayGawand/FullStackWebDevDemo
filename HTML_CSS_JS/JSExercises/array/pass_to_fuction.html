@@ -1,0 +1,47 @@
+<!DOCTYPE html>                           
+<html>
+<head>
+<script>
+function weekDays(){
+var days=["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"];
+display(days);
+}
+function display(days){
+var i,dayCount
+document.write('<input type="button" onclick="return weekDays()" value="click me to check output">');
+for(i=1;i<8;i++){
+switch(i){
+case 1:
+dayCount="First";
+break;
+case 2:
+dayCount="Second";
+break;
+case 3:
+dayCount="Third";
+break;
+case 4:
+dayCount="Fourth";
+break;
+case 5:
+dayCount="Fifth";
+break;
+case 6:
+dayCount="Sixth";
+break;
+case 7:
+dayCount="Seventh";
+break;
+default :
+dayCount="Not a week day.";
+break;
+}
+document.write(dayCount+" day of week is "+days[i-1]+"<br>");
+}
+}
+</script>
+</head>
+<body>
+<input type="button" onclick="return weekDays()" value="click me to check output">
+</body>
+</html>
