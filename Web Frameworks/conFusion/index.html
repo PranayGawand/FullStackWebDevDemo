@@ -14,7 +14,10 @@
     <link href="css/font-awesome.css" rel="stylesheet">
     <link href="css/font-awesome.min.css" rel="stylesheet">
     <link href="css/bootstrap-social.css" rel="stylesheet">
+    <style>
+
     
+    </style>
 </head>
 
 <body>
@@ -64,7 +67,7 @@
     </nav>
     
     
-    
+    <!--  The login modal  -->
     <div id="loginModal" class="modal fade" role="dialog">
         <div class="modal-dialog card-dialog">
                 <!-- Modal content-->
@@ -111,12 +114,109 @@
                     </div>
                     <div class='col-xs-12 col-sm-12 col-md-6'>
                         <p style="padding:35px;"></p>
-                        <a type="button" class="btn btn-warning btn-block" data-toggle="tooltip" title="Or Call us at +852 12345678" data-placement="bottom" href="#dest">Reserve Now!</a>
+                        <a type="button" class="btn btn-warning btn-block" data-toggle="modal" data-target="#reserveModal">Reserve Now!</a>
                     </div>
                 </div>
             </div>
         </div>
     </header>
+    
+    
+    
+    <!--  The reserve modal  -->
+    <div id="reserveModal" class="modal fade" role="dialog">
+        <div class="modal-dialog card-dialog">
+                <!-- Modal content-->
+                <div class="modal-content">
+                    <div class="modal-header">
+                         <button type="button" class="close" data-dismiss="modal">&times;</button>
+                         <h4 class="modal-title">Reserve your table now! </h4>
+                    </div>
+                    <div class="modal-body">
+                        <form>
+                            <div class='col-xs-12 col-sm-3'>
+                                <label style="text-align:right;">Number of Guest:</label>
+                            </div>
+                            <div class='col-xs-12 col-sm-9'>
+                                <label class="radio-inline">
+                                    <input type="radio" id="inlineCheckbox1" name="radAnswer" value="option1"> 1
+                                </label>
+                                <label class="radio-inline">
+                                    <input type="radio" id="inlineCheckbox1" name="radAnswer" value="option2"> 2
+                                </label>
+                                <label class="radio-inline">
+                                    <input type="radio" id="inlineCheckbox1" name="radAnswer" value="option3"> 3
+                                </label>
+                                <label class="radio-inline">
+                                    <input type="radio" id="inlineCheckbox1" name="radAnswer" value="option4"> 4
+                                </label>
+                                <label class="radio-inline">
+                                    <input type="radio" id="inlineCheckbox1" name="radAnswer" value="option5"> 5
+                                </label>
+                                <label class="radio-inline">
+                                    <input type="radio" id="inlineCheckbox1" name="radAnswer" value="option6"> 6
+                                </label>
+                            </div>
+                            <p style="padding:20px;"></p>
+                            <div class='col-xs-12 col-sm-3'>
+                                <p></p>
+                                <label style="text-align:right; display:inline-block">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Smoking:</label>
+                            </div>
+                            <div class="btn-group col-xs-12 col-sm-9" data-toggle="buttons">
+                                <label class="btn btn-success active">
+                                    <input type="radio" autocomplete="off" checked name="sm"> Non-smoking
+                                </label>
+                                <label class="btn btn-danger">
+                                    <input type="radio" autocomplete="off" name="sm"> Smoking
+                                </label>
+                            </div>
+                            <p style="padding:20px;"></p>
+                            <div class="form-group has-feedback">
+                                <div class='col-xs-12 col-sm-3'>
+                                <label for="dateAndTime" style="padding:3px; text-align:right; display:inline-block"> &nbsp;&nbsp;&nbsp;&nbsp; Date & Time:</label>
+                                </div>
+                                <div class="col-sm-4">
+                                    <input type="text" class="form-control" placeholder="Date">
+                                    <span class="glyphicon glyphicon-calendar form-control-feedback" aria-hidden="true">&nbsp;&nbsp;</span>
+                                </div>
+                                <div class="col-sm-4">
+                                    <input type="text" class="form-control" placeholder="Time">
+                                    <span class="glyphicon glyphicon-time form-control-feedback" aria-hidden="true">&nbsp;&nbsp;</span>
+                                </div>
+                            </div>
+                            <p style="padding:20px;"></p>
+                            <div class='col-xs-12 col-sm-6 col-sm-push-3'>
+                                <button type="submit" class="btn btn-primary">Reserve now!</button>
+                            </div>
+                            <div class='col-xs-12 col-sm-6'>
+                                <button type="submit" class="btn btn-default">Cancel</button>
+                            </div>
+                            <p style="padding:22px;"></p>
+                            <div class="alert alert-warning alert-dismissible" role="alert">
+                                <button type="button" class="close" data-dismiss="alert" aria-label="Close">    
+                                <span aria-hidden="ture">&times;</span>                
+                                </button>
+                                <strong>Warning:</strong> Please
+                                <a href="tel:+1279381823" class="alert-link">call</a> us to reserve for more than six guests.
+                            </div>        
+                        </form>           
+                    </div>
+                </div>
+        </div>
+    </div>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
 
     
     <!--  Start building the main component by using a container class -->
@@ -271,7 +371,8 @@
             </div>
         </div>
         
-        <!--  Reverse form row content -->
+<!--
+          Reverse form row content 
         <div class='row row-content'>
             <div class='col-xs-12 col-sm-3'>
                 <p style="padding:20px;"></p>
@@ -329,6 +430,7 @@
                 </form>                   
             </div>
         </div>
+-->
     </div>
 
     
