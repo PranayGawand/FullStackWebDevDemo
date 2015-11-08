@@ -116,3 +116,9 @@ box-shadow: 6px 7px 14px 1px rgba(186,191,217,1);
     border-bottom: 1px solid #ddd;
     padding: 10px;
 }
+
+#carouselButtons {
+    right:0px;
+    position: absolute;
+    bottom: 0px;
+}
