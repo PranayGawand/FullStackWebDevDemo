@@ -1,0 +1,26 @@
+{
+  "name": "conFusion",
+  "homepage": "https://github.com/JiYangE/FullStackWebDevelopment",
+  "authors": [
+    "Ji Yang"
+  ],
+  "description": "Website for an awesome rest",
+  "main": "index.html",
+  "moduleType": [
+    "globals"
+  ],
+  "keywords": [
+    "conFusion",
+    "Fusion",
+    "Restaurant"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
