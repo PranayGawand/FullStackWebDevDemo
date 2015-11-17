@@ -1,0 +1,38 @@
+/* Basic reset */
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+#calculator {
+	width: 325px;
+	height: auto;
+	
+	margin: 100px auto;
+	padding: 20px 20px 9px;
+	
+	background: #000080;
+	border-radius: 3px;
+}
+
+/* Clear floats */
+.keys {overflow: hidden;}
+
+.keys span {
+	float: left;
+	
+	width: 66px;
+	height: 40px;
+	
+	background: white;
+	border-radius: 3px;
+	
+	margin: 0 7px 11px 0;
+	
+	line-height: 40px;
+	text-align: center;
+}
+
+/* Remove right margins from operator keys */
+span.operator {margin-right: 0;}
