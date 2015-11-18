@@ -86,3 +86,24 @@ $(document).ready(function() {
        $('div').animate({left:'+=10px'},500);
        });
 });
+
+$(document).ready(function() {
+    $('div').click(function() {
+        $(this).effect("explode");
+        });
+    });
+
+$(document).ready(function() {
+    $('div').click(function() {
+        $(this).effect('bounce', {times:3}, 500);
+        });
+    });
+
+/* draggable */
+$(document).ready(function() {
+    $('#car').draggable();
+});
+
+$(document).ready(function() {
+    $('div').resizable();
+});t 
