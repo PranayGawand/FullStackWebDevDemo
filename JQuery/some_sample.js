@@ -61,4 +61,28 @@ $(document).ready(function() {
     $("div").css("border-radius","10px");
 });
 
-/* Modifying Content */
+/* Hover */
+$(document).ready(function(){
+  $('div').hover(
+    function(){
+        $(this).addClass("active");
+    },
+    function(){
+        $(this).removeClass("active");
+    }
+  );
+});
+
+/* Focus */
+$(document).ready(function() {
+    $('input').focus(function() {
+        $(this).css('outline-color','#FF0000');
+    });
+});
+
+/* Simple animation */
+$(document).ready(function() {
+   $(document).keydown(function() {
+       $('div').animate({left:'+=10px'},500);
+       });
+});
