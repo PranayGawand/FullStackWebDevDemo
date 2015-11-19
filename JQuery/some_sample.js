@@ -73,10 +73,13 @@ $(document).ready(function(){
   );
 });
 
-/* Focus */
-$(document).ready(function() {
-    $('input').focus(function() {
-        $(this).css('outline-color','#FF0000');
+/* Focus & Blur */
+$(document).ready(function(){
+    $("input").focus(function(){
+        $(this).css("background-color", "#cccccc");
+    });
+    $("input").blur(function(){
+        $(this).css("background-color", "#ffffff");
     });
 });
 
@@ -106,4 +109,5 @@ $(document).ready(function() {
 
 $(document).ready(function() {
     $('div').resizable();
-});t 
+});
+
