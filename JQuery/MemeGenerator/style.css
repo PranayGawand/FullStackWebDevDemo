@@ -25,14 +25,16 @@ body {
 }
 
 label {
-    color: aliceblue
+    color: black;
+    font-family: cursive;
+    font-size: 20px;
 }
 .binput {
   display: inline-block;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-  width: 250px;
+  width: 350px;
   height: 42px;
   cursor: pointer;
   top: 0;
@@ -68,14 +70,14 @@ label {
 }
 
 .binput:focus {
-  width: 300px;
+  width: 400px;
   cursor: default;
   padding: -13px 20px 0;
   color: rgba(255,255,255,1);
-  -webkit-transition: all 601ms cubic-bezier(0.68, -0.75, 0.265, 1.75);
-  -moz-transition: all 601ms cubic-bezier(0.68, -0.75, 0.265, 1.75);
-  -o-transition: all 601ms cubic-bezier(0.68, -0.75, 0.265, 1.75);
-  transition: all 601ms cubic-bezier(0.68, -0.75, 0.265, 1.75);
+  -webkit-transition: all 1000ms cubic-bezier(0.68, -0.75, 0.265, 1.75);
+  -moz-transition: all 1000ms cubic-bezier(0.68, -0.75, 0.265, 1.75);
+  -o-transition: all 1000ms cubic-bezier(0.68, -0.75, 0.265, 1.75);
+  transition: all 1000ms cubic-bezier(0.68, -0.75, 0.265, 1.75);
 }
 
 
@@ -85,7 +87,8 @@ label {
   box-sizing: content-box;
   cursor: pointer;
   border: none;
-  font: normal 72px/normal "Passero One", Helvetica, sans-serif;
+  font-size: 40px;
+  font: cursive;
   color: rgba(255,255,255,1);
   text-align: center;
   -o-text-overflow: clip;
@@ -106,28 +109,9 @@ label {
   transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1) 10ms;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 .meme {
   position: relative;
+    background: lightgray;
 }
 
 .top-caption,
