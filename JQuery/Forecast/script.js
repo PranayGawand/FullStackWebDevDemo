@@ -9,6 +9,3 @@ $(document).ready(main);
 
 
 
-
-$("#td_id").attr('class', 'newClass');
-
