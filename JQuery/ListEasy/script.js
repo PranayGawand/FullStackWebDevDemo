@@ -3,14 +3,17 @@ var template = function(text) {
 };
 
 var main = function() {
-  $('form').submit(function() {
-      
-    
-    
-    return false;  
-  });
-  
-  
+    $('form').submit(function() {
+        $('.list').append(template($('#todo').val()));
+        $('#todo').val("");
+        return false;    
+    });
+    $(document).on("click", '.glyphicon-remove', function() {
+        $(this).parent().remove();
+    }); 
+    $(document).on("click", '.glyphicon-star', function() {
+        $(this).toggleClass('active'); 
+    }); 
 };
 
 $(document).ready(main);
