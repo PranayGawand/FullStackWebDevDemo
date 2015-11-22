@@ -1,36 +1,36 @@
 app.controller('MainController', ['$scope', function($scope) { 
   $scope.title = 'The Book of Trees'; 
-  $scope.promo = '50%';
+  $scope.promo = 'All of books are selling with at least 50% discount!';
 	$scope.products = [ 
   { 
-    name: 'The Book of Trees', 
+    name: 'Introduction to Algorithms 2ed.', 
     price: 19, 
     pubdate: new Date('2014', '03', '08'), 
-    cover: 'img/the-book-of-trees.jpg',
+    cover: 'img/algo.jpg',
     likes: 0,
     dislikes: 0
   }, 
   { 
-    name: 'Program or be Programmed', 
+    name: 'Computer Organization', 
     price: 8, 
     pubdate: new Date('2013', '08', '01'), 
-    cover: 'img/program-or-be-programmed.jpg',
+    cover: 'img/org.jpg',
     likes: 0,
     dislikes: 0
   },
     { 
-    name: 'Program or be Programmed', 
+    name: 'C programming language', 
     price: 8, 
     pubdate: new Date('2013', '08', '01'), 
-    cover: 'img/program-or-be-programmed.jpg',
+    cover: 'img/c.jpg',
     likes: 0,
     dislikes: 0
     },
     { 
-    name: 'Program or be Programmed', 
+    name: 'Thinking in java', 
     price: 8, 
     pubdate: new Date('2013', '08', '01'), 
-    cover: 'img/program-or-be-programmed.jpg' ,
+    cover: 'img/java.jpg' ,
     likes: 0,
     dislikes: 0
     }

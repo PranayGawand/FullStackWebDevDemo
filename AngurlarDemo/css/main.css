@@ -17,6 +17,11 @@ html, body {
    display: inline-block;
 }
 
+.bookimg {
+    width: auto!important;
+    height: 300px !important;
+}
+
 .main {
  background-color: #f2f2f2 ;
  padding: 40px 0;
@@ -84,6 +89,7 @@ html, body {
 }
 
 .rating {
+ padding-bottom: 10px;
  text-align: right;
  -webkit-user-select: none;
     -moz-user-select: none;
