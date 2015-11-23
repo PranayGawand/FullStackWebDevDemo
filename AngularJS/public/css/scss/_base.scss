@@ -1,0 +1,17 @@
+@charset "UTF-8";
+@import "compass";
+
+$icon-font-path: "../fonts/" !default;
+$font-size-base: 20px !default;
+
+@import "vendor/bootstrap-compass";
+@import "vendor/bootstrap";
+@import "vendor/font-awesome";
+
+// compass watch --time -c config.rb -e development -s expanded --debug-info
+// compass watch --time -c config.rb -e production -s compressed --no-debug-info
+
+html, body {
+  font-size: $font-size-base;
+}
+
