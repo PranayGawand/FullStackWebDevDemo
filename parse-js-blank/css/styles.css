@@ -123,8 +123,8 @@ input:focus {
   border-radius: 30px;
   font-family: Arial;
   color: #ffffff;
-  font-size: 20px;
-  padding: 10px 20px 10px 20px;
+  font-size: 13px;
+  padding: 7px 12px 7px 12px;
   text-decoration: none;
 }
 
@@ -139,7 +139,7 @@ input:focus {
 }
 
 .regdiv{
-    height:250px;
+    height:320px;
     border-radius: 31px 31px 31px 31px;
     -moz-border-radius: 31px 31px 31px 31px;
     -webkit-border-radius: 31px 31px 31px 31px;
