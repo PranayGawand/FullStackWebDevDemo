@@ -16,62 +16,46 @@
     <div class="header">
       <div class="container">
         <div class="row">
-          <div class="col-md-4">
-            <h1>Armando P&eacute;rez</h1>
-          </div>
-          <div class="pull-right">
-            
-            <ul class="nav nav-pills">
-              <li class="nav-all active"><a href="#">Register</li>
-              <li id=""><a href="#">Login</a></li>
-            </ul>
-            
+          <div class="col-md-12">
+            <h1 class="h3d">What Ghost World!</h1>
           </div>
         </div>
       </div>
     </div>
     
-    <div class="container">
-        <div class="col-sm-12">
-            <p class="h3d">Logo here</p><br>
     
-            <div class="col-sm-6 regdiv" id="login">
-                <label>Username</label><br>
-                <input type="text" id="name"></input><br>
-                <label>Password</label><br>
-                <input type="password"></input><br>
-                <label>Password Again</label><br>
-                <input type="password"></input><br>
-                <p style="padding:10px"></p>
-                <button class="btn">Login!</button>
-                <button class="btn">New character?</button>
-            </div>   
-            <div class="col-sm-6 regdiv" id="regdiv">
-                <label>Username</label><br>
-                <input type="text" id="name"></input><br>
-                <label>Password</label><br>
-                <input type="password"></input><br>
-                <label>Password Again</label><br>
-                <input type="password"></input><br>
-                <p style="padding:10px"></p>
-                <button class="btn">Login!</button>
-                <button class="btn">New character?</button>
-            </div> 
+        <!-- Main jumbotron for a primary marketing message or call to action -->
+    <div class="jumbotron">
+
+
+    
+        <div class="container">
+            <div class="col-sm-12">
+                    <button class="btn" id="loginbtn">Login!/New Acct!</button>
+                <br>
+                <div class="col-sm-12 regdiv" id="login">
+                    <label>Username</label><br>
+                    <input type="text" id="name"></input><br>
+                    <label>Password</label><br>
+                    <input type="password"></input><br>
+                    <label>Password Again</label><br>
+                    <input type="password"></input><br>
+                    <p style="padding:10px"></p>
+                </div>   
+                <div class="col-sm-12 regdiv" id="reg">
+                    <label>Username</label><br>
+                    <input type="text" id="name"></input><br>
+                    <label>Password</label><br>
+                    <input type="password"></input><br>
+                    <p style="padding:10px"></p>
+                </div> 
+            </div>
         </div>
     </div>
+    <script src="js/loginControl.js"></script>
+<!--
   <script type="text/javascript">
-    Parse.initialize("FC80QKIeYFWKN22kxG7mAjkiMFREs6V8tHOnyR1G", "BBNAwNADfWNRaWKQgPDdGvazLznuXcGKLn7KbVhi");
-    
-    var TestObject = Parse.Object.extend("Character");
-    var testObject = new TestObject();
-      testObject.save({Warrior: "ABC"}, {
-      success: function(object) {
-        $(".success").show();
-      },
-      error: function(model, error) {
-        $(".error").show();
-      }
-    });
     
   </script>
+-->
 </body>

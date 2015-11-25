@@ -138,11 +138,5 @@ input:focus {
   text-decoration: none;
 }
 
-.regdiv{
-    height:320px;
-    border-radius: 31px 31px 31px 31px;
-    -moz-border-radius: 31px 31px 31px 31px;
-    -webkit-border-radius: 31px 31px 31px 31px;
-    border: 4px solid #8f9aba;
-    
+.regdiv{    
 }
