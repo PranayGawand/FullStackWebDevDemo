@@ -21,6 +21,7 @@
         
             #box ul li img {
                 width: 300px;
+                margin-top: 20px;
             }
         
 
@@ -52,17 +53,32 @@
                 var oUl = oBox.getElementsByTagName("ul");
                 var vH = document.documentElement.clientHeight;
                 
-                for(var a = 0; a < 18; a++){
-                    var oImg = document.createElement("img");
-                    oImg.src = "./img/" + a + ".jpg";
-                    
-                    var oLi = document.createElement("li");
-                    oLi.appendChild(oImg);
-                    
-                    // check the height, find the minimum height colunm and return its index
-                    var min_index = checkHeight(oUl);
-                    oUl[min_index].appendChild(oLi);
-                    
+                window.onscroll = function(){
+                    var sT = document.documentElement.scrollTop || document.body.scrollTop
+                    console.log(sT + vH);
+                    console.log(document.body.scrollHeight);
+                    // scroll bar height + explorerq3 height = content height
+                    // sT + vH = document.body.scrollHeight;
+                    // if reach the bottom
+                    if (sT + vH > document.body.scrollHeight*0.8){ 
+                        create();
+                    }
+                }
+                
+                create();
+                function create(){
+                    for(var a = 0; a < 18; a++){
+                        var oImg = document.createElement("img");
+                        oImg.src = "./img/" + a + ".jpg";
+
+                        var oLi = document.createElement("li");
+                        oLi.appendChild(oImg);
+
+                        // check the height, find the minimum height colunm and return its index
+                        var min_index = checkHeight(oUl);
+                        oUl[min_index].appendChild(oLi);
+
+                    }
                 }
             }
         
@@ -70,7 +86,7 @@
         </script>
     </head>
 
-    <body>
+    <body onload="create();">
         <div id="box">
             <ul>
                 <li>
