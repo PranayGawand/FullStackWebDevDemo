@@ -1,0 +1,94 @@
+<html>
+    <head>
+        <title></title>
+        <style type="text/css">
+            * {
+                padding: 0px;
+                margin: 0px;
+                list-style-type: none;
+            }
+        
+            #box {
+                width: 960px;
+                margin: 0 auto;
+            }
+            
+            #box ul {
+                float: left;
+                width: 300px;
+                margin: 0 10px;
+            }
+        
+            #box ul li img {
+                width: 300px;
+            }
+        
+
+        
+        </style>
+        
+        <script>
+            
+            // Get the column with minimum height
+            function checkHeight(oUl){
+                var height = 1000000;
+                var index = 0;
+                for (var i = 0; i<oUl.length; i++){
+                    console.log(oUl[i].offsetHeight);
+                    if (oUl[i].offsetHeight < height){
+                        height = oUl[i].offsetHeight;
+                        index = i;
+                    }
+                }
+                
+                return index;
+            }
+            
+            
+
+            
+            window.onload = function(){
+                var oBox = document.getElementById("box");
+                var oUl = oBox.getElementsByTagName("ul");
+                var vH = document.documentElement.clientHeight;
+                
+                for(var a = 0; a < 18; a++){
+                    var oImg = document.createElement("img");
+                    oImg.src = "./img/" + a + ".jpg";
+                    
+                    var oLi = document.createElement("li");
+                    oLi.appendChild(oImg);
+                    
+                    // check the height, find the minimum height colunm and return its index
+                    var min_index = checkHeight(oUl);
+                    oUl[min_index].appendChild(oLi);
+                    
+                }
+            }
+        
+        
+        </script>
+    </head>
+
+    <body>
+        <div id="box">
+            <ul>
+                <li>
+                    <img scr="">
+                </li>
+            </ul>
+            <ul>
+                <li>
+                    <img scr="">
+                </li>
+            </ul>
+            <ul>
+                <li>
+                    <img scr="">
+                </li>
+            </ul>
+        </div>
+    
+    
+    </body>
+</html>
