@@ -1,0 +1,98 @@
+<html>
+    <head>
+        <title></title>
+        <style type="text/css">
+            * {
+                padding: 0px;
+                margin: 0px;
+            }
+        
+            #box {
+                position: relative;
+            }
+            img {
+                width: 230px;
+                margin-top: 20px;
+            }
+        
+
+        
+        </style>
+        <script>
+            
+            function checkHeight(arr){
+                var height = 1000000;
+                var index = 0;
+                for (var i = 0; i<arr.length; i++){
+
+                    if (arr[i] < height){
+                        height = arr[i];
+                        index = i;
+                    }
+                }
+                
+                return index;
+            }
+            
+            
+            
+            
+            
+            window.onload=function(){
+                // 1 
+                var oBox = document.getElementById('box');
+                var vH = document.documentElement.clientHeight;
+                var vW = document.documentElement.clientWidth;
+                
+                // 2
+                var default_width = 230+16; // gaps need 8px on each side 
+                var div_num = Math.floor(vW / default_width);
+                
+                // 3
+                oBox.style.width = default_width * div_num + 'px';
+                oBox.style.height = "1000px";
+                oBox.style.background = "gray";
+                oBox.style.maigin = "0 auto"
+                
+                // 4
+                var arrHeight = [0,0,0,0,0,0,0];
+                
+                // 5
+                for (var i = 0; i < 18; i++){
+                    
+                    var oImg = document.createElement("img");
+                    oImg.src = "./img/" + i + ".jpg";
+                    var oDiv = document.createElement("div");
+                    oDiv.appendChild(oImg);
+                    oDiv.style.position = "absolute";
+                    
+                    // 6 
+                    var min_index = checkHeight(arrHeight);
+                    
+                    // 7  
+                    oDiv.style.top = arrHeight[min_index] + "px";
+                    oDiv.style.left = default_width * min_index +"px"
+                    oBox.appendChild(oDiv)
+                    alert(oDiv.offsetHeight);
+                                        
+                    arrHeight[min_index] = oDiv.offsetHeight + 8 + "px";
+                }
+                
+            }
+        
+        </script>
+    </head>
+    
+    <body>
+        <div id="box">
+            
+            
+            
+        </div>
+    
+    
+    
+    
+    
+    
+    </body>
