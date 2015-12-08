@@ -1,0 +1,59 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <script>
+            function ReSizeIt(){
+            //window.moveTo(0,0);
+            window.resizeTo(300,200)
+            }
+            window.onload=ReSizeIt;
+            window.onresize=ReSizeIt;
+        </script>
+        <link rel="stylesheet" href="https://s3.amazonaws.com/codecademy-content/projects/bootstrap.min.css">
+        <script type="text/javascript" script-name="alfa-slab-one" src="http://use.edgefonts.net/alfa-slab-one.js"></script>
+        <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+    <body>
+        <div class="main">
+            <div class="container">
+                <div class="row">
+                    <h1 class="enjoy-css">社团表彰大会</h1><br>
+                </div>
+                
+                <p style="padding-top:20px"></p>
+                <button id="go" style="margin-left:20em;">抽奖咯~~走你!</button>
+                <p style="padding-top:50px"></p>
+               
+                <p></p><br>
+                <p></p>
+                <div class="row">
+                    <div id = "choujiang1" class = "col-sm-6 choujiang">
+                        <label id="re1" style="font-size:43px; padding-left:180px">第一个</label>
+                    </div>
+                    <div id = "choujiang2" class = "col-sm-6 choujiang">
+                        <label id="re2" style="font-size:43px; padding-left:180px">第二个</label>
+                    </div>
+                </div>
+                <p style="padding-top:20px"></p>                    
+                <div class="row">
+                    <div id = "choujiang3" class = "col-sm-6 choujiang">
+                        <label  id="re3" style="font-size:43px; padding-left:180px">第三个</label>
+                    </div>
+                    <div id = "choujiang4" class = "col-sm-6 choujiang">
+                        <label  id="re4" style="font-size:43px; padding-left:180px">第四个</label>
+                    </div>
+                </div>
+                <p style="padding-top:20px"></p>     
+                <div class="row">
+                    <div id = "choujiang5" class = "col-sm-6 choujiang">
+                        <label  id="re5" style="font-size:43px; padding-left:180px">第五个</label>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+        <script src="https://s3.amazonaws.com/codecademy-content/projects/jquery.min.js"></script>
+        <script src="app.js"></script>
+    </body>
+</html>
