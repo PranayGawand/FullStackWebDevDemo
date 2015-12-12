@@ -1,23 +1,14 @@
 if (Meteor.isClient) {
-  // counter starts at 0
-  Session.setDefault('counter', 0);
 
-  Template.hello.helpers({
-    counter: function () {
-      return Session.get('counter');
-    }
-  });
-
-  Template.hello.events({
-    'click button': function () {
-      // increment the counter when button is clicked
-      Session.set('counter', Session.get('counter') + 1);
-    }
-  });
+    // console.log("I am the client");
+    var img_data = {
+        img_src:"lion.jpg",
+        img_alt:"A lion"
+    };
+    Template.images.helpers(img_data);
 }
 
 if (Meteor.isServer) {
-  Meteor.startup(function () {
-    // code to run on server at startup
-  });
+
+    console.log("I am the server");
 }

@@ -5,10 +5,9 @@
 <body>
   <h1>Welcome to Meteor!</h1>
 
-  {{> hello}}
+  {{> images}}
 </body>
 
-<template name="hello">
-  <button>Click Me</button>
-  <p>You've pressed the button {{counter}} times.</p>
+<template name="images">
+    <img src="{{img_src}}" alt="{{img_alt}}"/>
 </template>
