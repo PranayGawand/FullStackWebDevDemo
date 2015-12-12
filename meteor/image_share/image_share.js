@@ -1,6 +1,8 @@
 if (Meteor.isClient) {
 
     // console.log("I am the client");
+    
+    // need use [] to enclose arrays
     var img_data = [
         {
         img_src:"lion.jpg",
@@ -15,7 +17,16 @@ if (Meteor.isClient) {
         img_alt:"baseball2"
         }
     ];
+    
+
+    // helpers only accept the object in this way
     Template.images.helpers({images:img_data});
+    Template.images.events({
+        'click .js-image':function(event){
+            $(event.target).toggleClass("small");
+        }
+    });
+    
 }
 
 if (Meteor.isServer) {
