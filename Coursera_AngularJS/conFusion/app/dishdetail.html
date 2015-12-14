@@ -22,16 +22,13 @@
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
     <style>
-    ul{
-        list-style-type: none;
-    }
     </style>
 </head>
 
 <body ng-app='confusionApp'>
     
-    <div class="container" ng-controller="dishDetailController as dishCtrl">
-        <div class="row row-content">
+    <div class="container">
+        <div class="row row-content" ng-controller="dishDetailController as dishCtrl">
             <div class="col-xs-12">
                 <div class="media">
                     <div class="media-left media-middle">
@@ -54,17 +51,12 @@
                     <input type="text" width="500" placeholder=" Author, date and rating" ng-model="sortType"/>
                 </p>
                 <blockquote ng-repeat="comment in dishCtrl.dish.comments | orderBy: sortType">
-                    <ul class="media-list">
-                        <li class="media">
-                            <h4>{{comment.rating}} Stars Rating!</h4>
-                            <p>{{comment.comment}}</p>
-                            <footer>{{comment.author}}, {{comment.date | date:fullDate }}</footer>
-                        </li>
-                    </ul>
+                    <h4>{{comment.rating}} Stars Rating!</h4>
+                    <p>{{comment.comment}}</p>
+                    <footer>{{comment.author}}, {{comment.date | date:fullDate }}</footer>
                 </blockquote>
             </div>
         </div>
-
     </div>
 
     <script src="../bower_components/angular/angular.min.js"></script>
