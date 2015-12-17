@@ -63,4 +63,10 @@ angular.module('confusionApp', [])
             $scope.isSelected = function (checkTab) {
                 return ($scope.tab === checkTab);
             };
+            
+            // detail control button
+            $scope.showDetails = false;
+            $scope.toggleDetails = function() {
+                $scope.showDetails = !$scope.showDetails;
+            };
         }]);
