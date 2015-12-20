@@ -106,14 +106,14 @@ angular.module('confusionApp', [])
 
         .controller('DishDetailController', ['$scope', function($scope) {
 
-            var dish={
+            $scope.dish={
                           name:'Uthapizza',
                           image: 'images/uthapizza.png',
                           category: 'mains', 
                           label:'Hot',
                           price:'4.99',
                           description:'A unique combination of Indian Uthappam (pancake) and Italian pizza, topped with Cerignola olives, ripe vine cherry tomatoes, Vidalia onion, Guntur chillies and Buffalo Paneer.',
-                           comments: [
+                          comments: [
                                {
                                    rating:5,
                                    comment:"Imagine all the eatables, living in conFusion!",
@@ -148,23 +148,21 @@ angular.module('confusionApp', [])
                            ]
                     };
             
-            $scope.dish = dish;
-            
         }])
 
         .controller('DishCommentController', ['$scope', function($scope) {
             
             //Step 1: Create a JavaScript object to hold the comment from the form
-            
+            $scope.cmt = {author:"", comment:"", rating:5, date:""};
             $scope.submitComment = function () {
                 
                 //Step 2: This is how you record the date
                 date = new Date().toISOString();
-                
+                $scope.cmt.date = date;
                 // Step 3: Push your comment into the dish's comment array
-                $scope.dish.comments.push("Your JavaScript Object holding the comment");
-                
+                $scope.dish.comments.push(cmt);
                 //Step 4: reset your form to pristine
+                
                 
                 //Step 5: reset your JavaScript object that holds your comment
             }
