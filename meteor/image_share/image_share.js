@@ -5,7 +5,7 @@ console.log(Images.find().count())
 if (Meteor.isClient) {
 
     // console.log("I am the client");
-    
+
     // need use [] to enclose arrays
     var img_data = [
         {
