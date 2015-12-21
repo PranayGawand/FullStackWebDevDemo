@@ -28,6 +28,7 @@
         <div class="row row-content" ng-controller="MenuController">
             <div class="col-xs-12">
                 <button ng-click="toggleDetails()" class="btn btn-md btn-primary pull-right"                    type="button">
+                    <!-- if the showDetails returns a true, display "hide details", otherwise .. -->
                     {{showDetails ? 'Hide Details':'Show Details'}}
                 </button>  
                 <ul class="nav nav-tabs" role="tablist">
@@ -69,6 +70,7 @@
                     </ul>
                 </div>
             </div>
+            
         </div>
 <!-- build:js scripts/main.js -->
         <script src="../bower_components/angular/angular.min.js"></script>
