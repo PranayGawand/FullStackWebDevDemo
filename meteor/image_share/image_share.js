@@ -4,30 +4,19 @@ console.log(Images.find().count())
 
 if (Meteor.isClient) {
 
-    // console.log("I am the client");
-
-    // need use [] to enclose arrays
-    var img_data = [
-        {
-        img_src:"lion.jpg",
-        img_alt:"A lion"
-        },
-        {
-        img_src:"baseball.jpg",
-        img_alt:"baseball"
-        },
-        {
-        img_src:"baseball2.jpg",
-        img_alt:"baseball2"
-        }
-    ];
-    
-
     // helpers only accept the object in this way
-    Template.images.helpers({images:img_data});
+    Template.images.helpers({images:Images.find()});
+    
     Template.images.events({
         'click .js-image':function(event){
             $(event.target).toggleClass("small");
+        },
+        'click .js-del-image':function(event){
+            var image_id = this._id;
+            console.log(this._id);
+            $("#" + image_id).hide('slow', function(){
+                Images.remove({"_id":image_id});
+            });
         }
     });
     
