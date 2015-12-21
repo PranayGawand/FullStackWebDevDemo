@@ -1,3 +1,7 @@
+Images = new Mongo.Collection("images");
+console.log(Images.find().count())
+
+
 if (Meteor.isClient) {
 
     // console.log("I am the client");
@@ -30,6 +34,6 @@ if (Meteor.isClient) {
 }
 
 if (Meteor.isServer) {
-
+    console.log(Images.find().count())
     console.log("I am the server");
 }
