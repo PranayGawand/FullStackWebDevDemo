@@ -5,7 +5,9 @@ console.log(Images.find().count())
 if (Meteor.isClient) {
 
     // helpers only accept the object in this way
-    Template.images.helpers({images:Images.find()});
+    Template.images.helpers({images:Images.find({}, {sort:{createdOn:-1, rating:-1}})
+                            
+                            });
     
     Template.images.events({
         'click .js-image':function(event){
@@ -20,12 +22,36 @@ if (Meteor.isClient) {
         },
         'click .js-rate-image':function(event){
             console.log("You clicked a star");
+            
+            // for readablity, we set two var for rating and image_id
             var rating = $(event.currentTarget).data("userrating");
             console.log(rating);
             var image_id = this.id;
             console.log(image_id);
-            Images.update({_id:image_id},{$set:{rating:rating}});
+            Images.update({_id:image_id},{$set: {rating:rating}});
         }
+    });
+    
+    Template.image_add_form.events({
+        'submit .js-add-image':function(event){
+            var img_src;
+            var img_alt;
+            img_src = event.target.img_src.value;
+            img_alt = event.target.img_alt.value;
+            console.log(img_src + ": " + img_alt);
+            
+            Images.insert({
+                img_src:img_src;
+                img_alt:img_alt;
+                createdOn: new Date()
+        
+            });
+            
+            return false;
+        }
+        
+        
+        
     });
     
 }
