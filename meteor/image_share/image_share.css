@@ -1,9 +1,13 @@
 /* CSS declarations go here */
-img {
-    width: 250px;
-    height: 180px;
+.thumbnail {
+	height:500px;
+	word-wrap:break-word;
 }
 
-.small {
-    width: 180px;
+.thumbnail-img{
+	max-height:200px;
+}
+
+body{
+	padding-top:60px;
 }
