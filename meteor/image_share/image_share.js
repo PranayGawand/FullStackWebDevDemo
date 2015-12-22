@@ -26,9 +26,14 @@ if (Meteor.isClient) {
             // for readablity, we set two var for rating and image_id
             var rating = $(event.currentTarget).data("userrating");
             console.log(rating);
-            var image_id = this.id;
+            var image_id = this.data_id;
             console.log(image_id);
             Images.update({_id:image_id},{$set: {rating:rating}});
+        },
+        'click .js-show-me-modal':function(event){
+            $("#image_form_modal").modal('show')
+            
+            
         }
     });
     
@@ -41,12 +46,12 @@ if (Meteor.isClient) {
             console.log(img_src + ": " + img_alt);
             
             Images.insert({
-                img_src:img_src;
-                img_alt:img_alt;
+                img_src:img_src,
+                img_alt:img_alt,
                 createdOn: new Date()
         
             });
-            
+            $("#image_add_form").modal('hide');
             return false;
         }
         
