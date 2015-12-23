@@ -26,7 +26,7 @@ if (Meteor.isClient) {
     passwordSignupFields: "USERNAME_AND_EMAIL"
   });
 
-   Template.images.helpers({
+Template.images.helpers({
     images:function(){
       if (Session.get("userFilter")){// they set a filter!
         return Images.find({createdBy:Session.get("userFilter")}, {sort:{createdOn: -1, rating:-1}});         
