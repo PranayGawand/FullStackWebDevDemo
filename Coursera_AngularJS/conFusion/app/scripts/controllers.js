@@ -70,9 +70,7 @@ angular.module('confusionApp')
 
         .controller('DishDetailController', ['$scope', '$stateParams', 'menuFactory', function($scope, $stateParams, menuFactory) {
 
-            // var dish= menuFactory.getDish(parseInt($stateParams.id,10));
             $scope.dish = menuFactory.getDish(parseInt($stateParams.id,10));
-            //$scope.dish = dish;
             
         }])
 
@@ -90,11 +88,13 @@ angular.module('confusionApp')
                 $scope.commentForm.$setPristine();
                 
                 $scope.mycomment = {rating:5, comment:"", author:"", date:""};
+                
             }
         }])
 
         // implement the IndexController and About Controller here
         .controller('IndexController', ['$scope', 'menuFactory', 'corporateFactory', function($scope, menuFactory, corporateFactory) {
+            
             // get the information of the EC
             $scope.lead = corporateFactory.getLeader(3);
             
@@ -107,10 +107,8 @@ angular.module('confusionApp')
         }])
 
         .controller('AboutController', ['$scope', 'corporateFactory', function($scope, corporateFactory) {
+            
             $scope.leaders = corporateFactory.getLeaders();
-            
-            
-            
             
         }])
 
