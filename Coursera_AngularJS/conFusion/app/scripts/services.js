@@ -249,13 +249,13 @@ angular.module('confusionApp')
             // Remember this is a factory not a service
     
             // get the entire leadership information
-            this.getLeaders = function(){
+            corpfac.getLeaders = function(){
                     
                     return leadership;
                     
                 };
             // get the selected leadership member
-            this.getLead = function (index) {
+            corpfac.getLeader = function (index) {
                     
                     return leadership[index];
                 };
