@@ -5,27 +5,13 @@ angular.module('confusionApp')
     // setting a constant baseURL in this way
     .constant("baseURL", "http://localhost:3000/")
 
-    .service('menuFactory', ['$http', 'baseURL', function($http, baseURL) {
+    .service('menuFactory', ['$resource', 'baseURL', function($resource, baseURL) {
 
         // get all the dishes information
         this.getDishes = function(){
-
-            return $http.get(baseURL+"dishes");
-
-        };
-        
-        // get a selected dish information
-        this.getDish = function (index) {
-
-            return $http.get(baseURL+"dishes/"+index);
-
+            return $resource(baseURL+"dishes/:id", null, {'update':{method:'PUT' }});
         };
 
-        // get a promotion dish
-        this.getPromotion = function(){
-
-            return $http.get(baseURL + "promotions");
-        };
         
     }])
 
@@ -39,6 +25,12 @@ angular.module('confusionApp')
 
             return $http.get(baseURL+"leadership");
 
+        };
+        
+        // get a promotion dish
+        corpfac.getPromotion = function(){
+
+            return $http.get(baseURL + "promotions");
         };
         
         // get a selected leadership member

@@ -6,7 +6,7 @@
       "image": "images/uthapizza.png",
       "category": "mains",
       "label": "Hot",
-      "price": "4.99",
+      "price": 4.99,
       "description": "A unique combination of Indian Uthappam (pancake) and Italian pizza, topped with Cerignola olives, ripe vine cherry tomatoes, Vidalia onion, Guntur chillies and Buffalo Paneer.",
       "comments": [
         {
@@ -38,6 +38,41 @@
           "comment": "It's your birthday, we're gonna party!",
           "author": "25 Cent",
           "date": "2011-12-02T17:57:28.556094Z"
+        },
+        {
+          "rating": 5,
+          "comment": "",
+          "author": "",
+          "date": "2015-12-25T02:21:12.496Z"
+        },
+        {
+          "rating": 5,
+          "comment": "",
+          "author": "",
+          "date": "2015-12-25T02:30:37.695Z"
+        },
+        {
+          "rating": 5,
+          "comment": "",
+          "date": "2015-12-25T02:31:26.519Z"
+        },
+        {
+          "rating": 5,
+          "comment": "",
+          "author": "",
+          "date": "2015-12-25T02:34:15.614Z"
+        },
+        {
+          "rating": 5,
+          "comment": "",
+          "author": "",
+          "date": "2015-12-25T02:34:15.614Z"
+        },
+        {
+          "rating": 5,
+          "comment": "",
+          "author": "",
+          "date": "2015-12-25T02:34:15.614Z"
         }
       ]
     },
@@ -88,7 +123,7 @@
       "image": "images/vadonut.png",
       "category": "appetizer",
       "label": "New",
-      "price": "1.99",
+      "price": 1.99,
       "description": "A quintessential ConFusion experience, is it a vada or is it a donut?",
       "comments": [
         {
@@ -120,6 +155,12 @@
           "comment": "It's your birthday, we're gonna party!",
           "author": "25 Cent",
           "date": "2011-12-02T17:57:28.556094Z"
+        },
+        {
+          "rating": "2",
+          "comment": "Not Good!",
+          "author": "Ji Yang",
+          "date": "2015-12-25T02:35:12.932Z"
         }
       ]
     },

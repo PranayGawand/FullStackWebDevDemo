@@ -9,18 +9,15 @@ angular.module('confusionApp')
         $scope.showDetails = false;
         $scope.showMenu = false;
         $scope.message = "Loading ...";
-        $scope.dishes= {};
         
-        menuFactory.getDishes()
-        .then(
+        menuFactory.getDishes().query(
             function(response) {
-                $scope.dishes = response.data;
+                $scope.dishes = response;
                 $scope.showMenu = true;
             },
             function(response) {
                 $scope.message = "Error: "+response.status + " " + response.statusText;
-            }
-        );
+            });
 
         $scope.select = function(setTab) {
             $scope.tab = setTab;
@@ -85,34 +82,32 @@ angular.module('confusionApp')
         $scope.dish = {};
         $scope.showDish = false;
         $scope.message="Loading ...";
-        menuFactory.getDish(parseInt($stateParams.id,10))
-        .then(
-            function(response) {
-                $scope.dish = response.data;
-                $scope.showDish = true;
-            },
-            function(response) {
-                $scope.message = "Error: " + response.status + " " + response.statusText;
-            }
-        );
+        $scope.dish = menuFactory.getDishes().get({id:parseInt($stateParams.id,10)})
+            .$promise.then(
+                function(response){
+                    $scope.dish = response;
+                    $scope.showDish = true;
+                },
+                function(response) {
+                    $scope.message = "Error: " + response.status + " " + response.statusText;
+                }
+            );
 
     }])
 
-    .controller('DishCommentController', ['$scope', function($scope) {
+    .controller('DishCommentController', ['$scope', 'menuFactory', function($scope, menuFactory) {
 
-        $scope.mycomment = {rating:5, comment:"", author:"", date:""};
+        $scope.comment = {rating:5, comment:"", author:"", date:""};
 
         $scope.submitComment = function () {
-
-            $scope.mycomment.date = new Date().toISOString();
-            // console.log($scope.mycomment);
-
-            $scope.dish.comments.push($scope.mycomment);
-
+            $scope.comment.date = new Date().toISOString();
+            console.log($scope.comment);
+            $scope.dish.comments.push($scope.comment);
+            menuFactory.getDishes().update({id:$scope.dish.id}, $scope.dish);
             $scope.commentForm.$setPristine();
-
-            $scope.mycomment = {rating:5, comment:"", author:"", date:""};
-        };
+            $scope.comment = {rating:5, comment:"", author:"", date:""};
+            }
+    
     }])
 
     // implement the IndexController and About Controller here
@@ -121,28 +116,23 @@ angular.module('confusionApp')
         // get the information of the EC
         $scope.lead = corporateFactory.getLeader(3);
 
-        // get the information of the featured promotion
-        $scope.promo = menuFactory.getPromotion();
-
         // get the information of the featured dish
-        $scope.dish = {};
         $scope.showDish = false;
         $scope.message="Loading ...";
-
-        menuFactory.getDish(0)
-        .then(
+        $scope.dish = menuFactory.getDishes().get({id:0})
+        .$promise.then(
             function(response) {
-                $scope.dish = response.data;
+                $scope.dish = response;
                 $scope.showDish = true;
             },
             function(response) {
-                $scope.message = "Loading Dish Error: " + response.status + " " + response.statusText;
+                $scope.message = "Error: " + response.status + " " + response.statusText;
             }
         );
 
         $scope.showPromo = false;
         $scope.promo = {};
-        menuFactory.getPromotion()
+        corporateFactory.getPromotion()
         .then(
             function(response) {
                 $scope.promo = response.data[0];
@@ -152,7 +142,6 @@ angular.module('confusionApp')
                 $scope.message = "Loading Dish Error: " + response.status + " " + response.statusText;
             }
         );
-
 
 
         $scope.lead = {};
