@@ -1,7 +1,6 @@
-// this is image_share.js
-Images = new Mongo.Collection("images");
+console.log("This is the client!");
 
-if (Meteor.isClient) {
+
 
   Session.set("imageLimit", 8);
 
@@ -130,7 +129,4 @@ Template.images.helpers({
      return false;
     }
   });
-
-
-}
 
