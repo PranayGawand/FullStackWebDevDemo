@@ -9,38 +9,47 @@ angular.module('confusionApp')
 
         // get all the dishes information
         this.getDishes = function(){
-            return $resource(baseURL+"dishes/:id", null, {'update':{method:'PUT' }});
+            return $resource(baseURL + "dishes/:id", null, {'update':{method:'PUT' }});
         };
 
         
     }])
 
-    .factory('corporateFactory', ['$http', 'baseURL', function($http, baseURL) {
+    .factory('corporateFactory', ['$resource', 'baseURL', function($resource, baseURL) {
         
-        // initializa the returned factory object
+        // initialize the returned factory object
         var corpfac = {};
 
         // get the entire leadership information
         corpfac.getLeaders = function(){
 
-            return $http.get(baseURL+"leadership");
+            return $resource(baseURL + "leadership/:id", null, {'update':{method:'PUT' }});
 
         };
         
         // get a promotion dish
         corpfac.getPromotion = function(){
 
-            return $http.get(baseURL + "promotions");
+            return $resource(baseURL + "promotions/:id", null, {});
         };
         
-        // get a selected leadership member
-        corpfac.getLeader = function (index) {
-
-            return $http.get(baseURL+"leadership/"+index);
-        
-        };
 
         // return the object from the factory
         return corpfac;
 
+    }])
+
+    .factory('feedbackFactory', ['$resource', 'baseURL', function($resource, baseURL) {
+        
+        // initialize the returned factory object
+        var feedbackfac = {};
+       
+        // get a promotion dish
+        feedbackfac.getFeedback = function(){
+            return $resource(baseURL + "feedback/:firstname", null, {'create':{method:'POST' }});
+        };
+        
+        return feedbackfac;
+
     }]);
+
