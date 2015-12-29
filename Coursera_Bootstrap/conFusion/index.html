@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -7,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Ristorante Con Fusion: Home</title>
-    
+
     <link href="bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="bower_components/bootstrap/dist/css/bootstrap-theme.min.css" rel="stylesheet">
     <link href="bower_components/font-awesome/css/font-awesome.min.css" rel="stylesheet">
@@ -17,9 +16,7 @@
 </head>
 
 <body>
-    
-    
-    
+
     <!--  Responsive navbar  -->
     <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
         <div class="container">
@@ -39,7 +36,7 @@
                     <li><a href="aboutus.html"><span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span> About</a></li>
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-                        <span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span> Menu <span class="caret"></span></a>
+                            <span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span> Menu <span class="caret"></span></a>
                         <ul class="dropdown-menu">
                             <li><a href="#">Appetizers</a></li>
                             <li><a href="#">Main Courses</a></li>
@@ -54,46 +51,48 @@
                     <li><a href="contactus.html"><i class="fa fa-envelope-o"></i> Contact</a></li>
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
-                    <li><a id="myLogin"> 
-                        <!-- data-target="#loginModal">-->
-                    <span class="glyphicon glyphicon-log-in"></span> Login</a>
+                    <li>
+                        <a id="myLogin">
+                            <!-- data-target="#loginModal">-->
+                            <span class="glyphicon glyphicon-log-in"></span> Login</a>
                     </li>
                 </ul>
-            </div>   
+            </div>
         </div>
     </nav>
-    
-    
+
+
     <!--  The login modal  -->
     <div id="loginModal" class="modal fade" role="dialog">
         <div class="modal-dialog card-dialog">
-                <!-- Modal content-->
-                <div class="modal-content">
-                    <div class="modal-header">
-                         <button type="button" class="close" data-dismiss="modal">&times;</button>
-                         <h4 class="modal-title">Login </h4>
-                    </div>
-                    <div class="modal-body">
-                        <form class="form-inline">
-                            <div class="form-group">
-                                <label class="sr-only" for="email">Email Address</label>
-                                <input type="email" class="form-control input-sm" placeholder="Email">
-                            </div>
-                            <div class="form-group">
-                                <label class="sr-only" for="email">Password</label>
-                                <input type="password" class="form-control input-sm" placeholder="Password">
-                            </div>
-                            <div class="checkbox">
-                                <label><input type="checkbox" value=""> Remember me</label>
-                            </div>
-                            <button type="button" class="btn btn-info btn-sm">Sign in</button>
-                        </form>           
-                    </div>
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">Login </h4>
                 </div>
+                <div class="modal-body">
+                    <form class="form-inline">
+                        <div class="form-group">
+                            <label class="sr-only" for="email">Email Address</label>
+                            <input type="email" class="form-control input-sm" placeholder="Email">
+                        </div>
+                        <div class="form-group">
+                            <label class="sr-only" for="email">Password</label>
+                            <input type="password" class="form-control input-sm" placeholder="Password">
+                        </div>
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox" value=""> Remember me</label>
+                        </div>
+                        <button type="button" class="btn btn-info btn-sm">Sign in</button>
+                    </form>
+                </div>
+            </div>
         </div>
     </div>
-    
-    
+
+
 
     <!--  Make the header be a jumbotron  -->
     <header class='jumbotron card'>
@@ -111,15 +110,15 @@
                     </div>
                     <div class='col-xs-12 col-sm-12 col-md-6'>
                         <p style="padding:35px;"></p>
-                        <a type="button" class="btn btn-warning btn-block" id = "myRes">Reserve Now!</a>
+                        <a type="button" class="btn btn-warning btn-block" id="myRes">Reserve Now!</a>
                     </div>
                 </div>
             </div>
         </div>
     </header>
-    
-    
-    
+
+
+
     <!--  The reserve modal  -->
     <div id="reserveModal" class="modal fade" role="dialog">
         <div class="modal-dialog">
@@ -133,15 +132,21 @@
                         <div class="form-group">
                             <label for="guests" class="col-xs-12 col-sm-2 control-label">Number of Guests</label>
                             <div class="col-xs-12 col-sm-10" id="guests">
-                                <label class="radio-inline"><input type="radio" name="guestsCount" id="guests1" value="option1">1</label>
-                                <label class="radio-inline"><input type="radio" name="guestsCount" id="guests2" value="option2">2</label>
-                                <label class="radio-inline"><input type="radio" name="guestsCount" id="guests3" value="option3">3</label>
-                                <label class="radio-inline"><input type="radio" name="guestsCount" id="guests4" value="option4">4</label>
-                                <label class="radio-inline"><input type="radio" name="guestsCount" id="guests5" value="option5">5</label>
-                                <label class="radio-inline"><input type="radio" name="guestsCount" id="guests6" value="option6">6</label>
+                                <label class="radio-inline">
+                                    <input type="radio" name="guestsCount" id="guests1" value="option1">1</label>
+                                <label class="radio-inline">
+                                    <input type="radio" name="guestsCount" id="guests2" value="option2">2</label>
+                                <label class="radio-inline">
+                                    <input type="radio" name="guestsCount" id="guests3" value="option3">3</label>
+                                <label class="radio-inline">
+                                    <input type="radio" name="guestsCount" id="guests4" value="option4">4</label>
+                                <label class="radio-inline">
+                                    <input type="radio" name="guestsCount" id="guests5" value="option5">5</label>
+                                <label class="radio-inline">
+                                    <input type="radio" name="guestsCount" id="guests6" value="option6">6</label>
                             </div>
                         </div>
-                        
+
                         <div class="form-group">
                             <label for="section" class="col-xs-12 col-sm-2 control-label">Section</label>
                             <div class="btn-group col-xs-12 col-sm-10" id="section" data-toggle="buttons">
@@ -153,7 +158,7 @@
                                 </label>
                             </div>
                         </div>
-                        
+
                         <div class="form-group has-feedback">
                             <label class="col-xs-12 col-sm-2 control-label" for="reserve_date_time">Date and Time</label>
                             <div class="col-xs-12 col-sm-4" id="reserve_date_time">
@@ -165,14 +170,14 @@
                                 <span class="glyphicon glyphicon-time form-control-feedback" aria-hidden="true"></span>
                             </div>
                         </div>
-                        
+
                         <div class="form-group">
                             <div class="col-sm-offset-2 col-sm-10">
                                 <button type="submit" class="btn btn-primary">Reserve</button>
                                 <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
                             </div>
                         </div>
-                        
+
                         <div class="alert alert-warning alert-dismissible" role="alert">
                             <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
                             <strong>Warning: </strong>Please <a href="tel:+85212345678" class="alert-link">call</a> us to reserve for more than six guests.
@@ -184,43 +189,38 @@
     </div>
 
 
-    
-    
 
-    
+
+
+
     <!--  Start building the main component by using a container class -->
     <div class='container'>
-        
+
         <!--  Introduce a carousel -->
         <div class="row row-content">
             <div class="col-xs-12">
 
                 <div id="mycarousel" class="carousel slide" data-ride="carousel">
-                    
+
                     <!-- Indicators -->
                     <ol class="carousel-indicators">
                         <li data-target="#mycarousel" data-slide-to="0" class="active"></li>
                         <li data-target="#mycarousel" data-slide-to="1"></li>
                         <li data-target="#mycarousel" data-slide-to="2"></li>
                     </ol>
-                    
+
                     <!-- Wrapper for slides -->
                     <div class="carousel-inner" role="listbox">
                         <div class="item active">
-                            <img class="img-responsive"
-                             src="img/uthappizza.png" alt="Uthappizza">
+                            <img class="img-responsive" src="img/uthappizza.png" alt="Uthappizza">
                             <div class="carousel-caption">
                                 <h2>Uthappizza  <span class="label label-danger">Hot</span> <span class="badge">$4.99</span></h2>
-                                <p>A unique combination of Indian Uthappam (pancake) and
-                                  Italian pizza, topped with Cerignola olives, ripe vine
-                                  cherry tomatoes, Vidalia onion, Guntur chillies and
-                                  Buffalo Paneer.</p>
+                                <p>A unique combination of Indian Uthappam (pancake) and Italian pizza, topped with Cerignola olives, ripe vine cherry tomatoes, Vidalia onion, Guntur chillies and Buffalo Paneer.</p>
                                 <p><a class="btn btn-primary btn-xs" href="#">More &raquo;</a></p>
                             </div>
                         </div>
                         <div class="item">
-                            <img class="img-responsive"
-                             src="img/buffet.png" alt="Promotions">
+                            <img class="img-responsive" src="img/buffet.png" alt="Promotions">
                             <div class="carousel-caption">
                                 <h2>Weekend Grand Buffet <span class="label label-danger">New</span></h2>
                                 <p>Featuring mouthwatering combinations with a choice of five different salads, six enticing appetizers, six main entrees and five choicest desserts. Free flowing bubbly and soft drinks. All for just $19.99 per person
@@ -229,22 +229,18 @@
                             </div>
                         </div>
                         <div class="item">
-                            <img class="img-responsive"
-                             src="img/alberto.png" alt="Alberto">
+                            <img class="img-responsive" src="img/alberto.png" alt="Alberto">
                             <div class="carousel-caption">
                                 <h2 class="media-heading">Alberto Somayya</h2>
                                 <h4>Executive Chef</h4>
-                                <p>Award winning three-star Michelin chef with wide
-                                 International experience having worked closely with
-                                 whos-who in the culinary world, he specializes in
-                                  creating mouthwatering Indo-Italian fusion experiences.
+                                <p>Award winning three-star Michelin chef with wide International experience having worked closely with whos-who in the culinary world, he specializes in creating mouthwatering Indo-Italian fusion experiences.
                                 </p>
                                 <p><a class="btn btn-primary btn-xs" href="#">More &raquo;</a></p>
                             </div>
                         </div>
                     </div>
-                </div> 
-                
+                </div>
+
                 <!--  Controls shoule be added after the carousel  -->
                 <a class="left carousel-control" href="#mycarousel" role="button" data-slide="prev">
                     <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
@@ -256,16 +252,16 @@
                 </a>
                 <div class="btn-group" id="carouselButtons">
                     <button class="btn btn-danger btn-xs" id="carousel-pause">
-                	    <span class="glyphicon glyphicon-pause" aria-hidden="true"></span>
+                        <span class="glyphicon glyphicon-pause" aria-hidden="true"></span>
                     </button>
                     <button class="btn btn-danger btn-xs" id="carousel-play">
-                	    <span class="glyphicon glyphicon-play" aria-hidden="true"></span>
+                        <span class="glyphicon glyphicon-play" aria-hidden="true"></span>
                     </button>
                 </div>
             </div>
         </div>
-        
-        
+
+
         <!--  First row content -->
         <div class='row row-content'>
             <div class='col-xs-12 col-sm-3 col-sm-push-9'>
@@ -276,7 +272,7 @@
                 <div class="media">
                     <div class="media-left media-middle">
                         <a href="#">
-                        <img class="media-object img-thumbnail" src="img/uthappizza.png" alt="Uthappizza">
+                            <img class="media-object img-thumbnail" src="img/uthappizza.png" alt="Uthappizza">
                         </a>
                     </div>
                     <div class="media-body">
@@ -284,16 +280,13 @@
                             <span class="label label-danger label-xs">Hot</span>
                             <span class="badge">$4.99</span>
                         </h2>
-                        <p>A unique combination of Indian Uthappam (pancake) and
-                          Italian pizza, topped with Cerignola olives, ripe vine
-                          cherry tomatoes, Vidalia onion, Guntur chillies and
-                          Buffalo Paneer.</p>
+                        <p>A unique combination of Indian Uthappam (pancake) and Italian pizza, topped with Cerignola olives, ripe vine cherry tomatoes, Vidalia onion, Guntur chillies and Buffalo Paneer.</p>
                         <p><a class="btn btn-primary btn-xs" href="#">More &raquo;</a></p>
                     </div>
                 </div>
             </div>
         </div>
-        
+
 
         <!--  Second row content -->
         <div class='row row-content'>
@@ -313,13 +306,13 @@
                     </div>
                     <div class="media-right media-middle">
                         <a href="#">
-                        <img class="media-object img-thumbnail" src="img/buffet.png" alt="Buffet">
+                            <img class="media-object img-thumbnail" src="img/buffet.png" alt="Buffet">
                         </a>
                     </div>
                 </div>
             </div>
         </div>
-        
+
         <!--  Thrid row content -->
         <div class='row row-content'>
             <div class='col-xs-12 col-sm-3 col-sm-push-9'>
@@ -330,16 +323,13 @@
                 <div class="media">
                     <div class="media-left media-middle">
                         <a href="#">
-                        <img class="media-object img-thumbnail" src="img/alberto.png" alt="Alberto Somayya">
+                            <img class="media-object img-thumbnail" src="img/alberto.png" alt="Alberto Somayya">
                         </a>
                     </div>
                     <div class="media-body">
                         <h2 class="media-heading">Alberto Somayya</h2>
                         <h4>Executive Chef</h4>
-                        <p>Award winning three-star Michelin chef with wide
-                         International experience having worked closely with
-                         whos-who in the culinary world, he specializes in
-                          creating mouthwatering Indo-Italian fusion experiences.
+                        <p>Award winning three-star Michelin chef with wide International experience having worked closely with whos-who in the culinary world, he specializes in creating mouthwatering Indo-Italian fusion experiences.
                         </p>
                         <p><a class="btn btn-primary btn-xs" href="#">More &raquo;</a></p>
                     </div>
@@ -348,13 +338,13 @@
         </div>
     </div>
 
-    
-    
+
+
     <!--  Footer -->
     <footer class="row-footer">
         <div class='container'>
-            <div class='row'>             
-                <div  class='col-xs-5 col-sm-3 col-xs-offset-1 col-sm-2 col-sm-offset-1'>
+            <div class='row'>
+                <div class='col-xs-5 col-sm-3 col-xs-offset-1 col-sm-2 col-sm-offset-1'>
                     <h5>Links</h5>
                     <ul class='list-unstyled'>
                         <li><a href="index.html">Home</a></li>
@@ -392,39 +382,41 @@
         </div>
     </footer>
 
-    
+
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="bower_components/jquery/dist/jquery.min.js"></script>
     <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
     <script>
-        $(document).ready(function(){
-        $('[data-toggle="tooltip"]').tooltip();
-         });
+        $(document).ready(function() {
+            $('[data-toggle="tooltip"]').tooltip();
+        });
     </script>
     <script>
-        $(document).ready(function(){
-            $("#mycarousel").carousel( { interval: 2000 } );
-                          $("#carousel-pause").click(function(){
+        $(document).ready(function() {
+            $("#mycarousel").carousel({
+                interval: 2000
+            });
+            $("#carousel-pause").click(function() {
                 $("#mycarousel").carousel('pause');
             });
-                        $("#carousel-play").click(function(){
+            $("#carousel-play").click(function() {
                 $("#mycarousel").carousel('cycle');
             });
         });
     </script>
     <script>
-        $(document).ready(function(){
-            $("#myLogin").click(function(){
+        $(document).ready(function() {
+            $("#myLogin").click(function() {
                 $("#loginModal").modal();
             });
         });
-        $(document).ready(function(){
-            $("#myRes").click(function(){
+        $(document).ready(function() {
+            $("#myRes").click(function() {
                 $("#reserveModal").modal();
             });
         });
     </script>
-    
+
 </body>
 
 </html>
