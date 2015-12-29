@@ -90,7 +90,7 @@ angular.module('confusionApp')
             console.log('incorrect');
         } else {
             $scope.invalidChannelSelection = false;
-            feedbackFactory.getFeedback().create({
+            feedbackFactory.postFeedback().post({
                 firstName: $scope.feedback.firstName
             }, $scope.feedback);
             $scope.feedback = {
@@ -106,8 +106,8 @@ angular.module('confusionApp')
                 }
             };
             $scope.feedback.mychannel = "";
+            alert("We have received your feedback!");
             $scope.feedbackForm.$setPristine();
-            console.log($scope.feedback);
         }
     };
     }])

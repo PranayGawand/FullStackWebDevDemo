@@ -170,7 +170,7 @@
       "image": "images/elaicheesecake.png",
       "category": "dessert",
       "label": "",
-      "price": "2.99",
+      "price": 2.99,
       "description": "A delectable, semi-sweet New York Style Cheese Cake, with Graham cracker crust and spiced with Indian cardamoms",
       "comments": [
         {
@@ -202,6 +202,12 @@
           "comment": "It's your birthday, we're gonna party!",
           "author": "25 Cent",
           "date": "2011-12-02T17:57:28.556094Z"
+        },
+        {
+          "rating": 5,
+          "comment": "So good!",
+          "author": "Ji Yang",
+          "date": "2015-12-29T04:07:59.985Z"
         }
       ]
     }
@@ -250,5 +256,71 @@
       "description": "Award winning three-star Michelin chef with wide International experience having worked closely with whos-who in the culinary world, he specializes in creating mouthwatering Indo-Italian fusion experiences. He says, Put together the cuisines from the two craziest cultures, and you get a winning hit! Amma Mia!"
     }
   ],
-  "feedback": []
+  "feedback": [
+    {
+      "comments": 123123123,
+      "mychannel": "Email",
+      "firstName": "Ji",
+      "lastName": "Yang",
+      "agree": true,
+      "email": "123@mail.com",
+      "tel": {
+        "areacode": "123",
+        "number": ""
+      },
+      "id": 1
+    },
+    {
+      "comments": 123,
+      "mychannel": "",
+      "firstName": 123,
+      "lastName": 123,
+      "agree": false,
+      "email": "123@gmai.com",
+      "tel": {
+        "areacode": "1213",
+        "number": ""
+      },
+      "id": 2
+    },
+    {
+      "comments": "adsasdasdasd",
+      "mychannel": "tel",
+      "firstName": "Ji Yan",
+      "lastName": "Yang",
+      "agree": true,
+      "email": "asda@mail.com",
+      "tel": {
+        "areacode": "1231",
+        "number": ""
+      },
+      "id": 3
+    },
+    {
+      "comments": "asdasdasdad",
+      "mychannel": "tel",
+      "firstName": "fname",
+      "lastName": "lname",
+      "agree": true,
+      "email": "123123@mail.com",
+      "tel": {
+        "areacode": "31231",
+        "number": "3123123123"
+      },
+      "id": 4
+    },
+    {
+      "comments": "Test comments",
+      "mychannel": "Email",
+      "firstName": "Ji",
+      "lastName": "Yang",
+      "agree": true,
+      "email": "tesr@gmail.com",
+      "tel": {
+        "areacode": "+86",
+        "number": "1381135967"
+      },
+      "id": 5
+    }
+  ]
 }

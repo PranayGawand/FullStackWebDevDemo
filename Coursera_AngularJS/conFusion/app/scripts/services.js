@@ -52,16 +52,11 @@ angular.module('confusionApp')
     // initialize the returned factory object
     var feedbackfac = {};
 
-    //        var feedback = $resource('/user/:userId/card/:cardId',
-    //         {userId:123, cardId:'@id'}, {
-    //          charge: {method:'POST', params:{charge:true}}
-    //         });
-
 
     // get a promotion dish
     feedbackfac.postFeedback = function () {
-        return $resource(baseURL + "feedback/:firstname", null, {
-            'create': {
+        return $resource(baseURL + "feedback/", null, {
+            'post': {
                 method: 'POST'
             }
         });
