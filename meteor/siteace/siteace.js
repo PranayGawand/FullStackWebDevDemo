@@ -25,7 +25,7 @@ if (Meteor.isClient) {
 			var website_id = this._id;
 			console.log("Up voting website with id "+website_id);
 			// put the code in here to add a vote to a website!
-
+            
 			return false;// prevent the button from reloading the page
 		}, 
 		"click .js-downvote":function(event){
